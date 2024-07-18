@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #343a40;
+      color: #ffffff;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    .card {
+      background-color: #495057;
+      border: none;
+    }
+    .card-header, .card-footer {
+      background-color: #6c757d;
+      border: none;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+    }
+    table.data {
+      width: 100%;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+    table.data th,
+    table.data td {
+      padding: .75rem;
+      vertical-align: top;
+      border-top: 1px solid #6c757d;
+    }
+    table.data thead th {
+      vertical-align: bottom;
+      border-bottom: 2px solid #6c757d;
+    }
+    table.data tbody + tbody {
+      border-top: 2px solid #6c757d;
+    }
+    table.data td,
+    table.data th {
+      background-color: #495057;
+    }
+  </style>
+  <title>Company Name - Prediction Results</title>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h1>Shree Manjunatha 
+            Engineering Works</h1>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">Prediction Results</h2>
+        <div class="card-text">
+          {{ tables|safe }}
+        </div>
+        <div class="card-text">
+          <img src="data:image/png;base64,{{ plot_url }}" class="img-fluid" />
+        </div>
+      </div>
+      <div class="card-footer text-muted">
+        &copy; 2024 Engineering Works. All rights reserved.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
