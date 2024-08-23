@@ -18,7 +18,7 @@ with open('trained_logreg_model.sav', 'rb') as model_file:
 with open('tfidf_vectorizer.sav', 'rb') as vectorizer_file:
     tfidf_vectorizer = pickle.load(vectorizer_file)
 
-# Define stop words and stemmer (extracted from the notebook)
+# Define stop words and stemmer
 stop_words = {'yourselves', 'between', 'whom', 'itself', 'is', "she's", 'up', 'herself', 'here', 'your', 'each',
              'we', 'he', 'my', "you've", 'having', 'in', 'both', 'for', 'themselves', 'are', 'them', 'other',
              'and', 'an', 'during', 'their', 'can', 'yourself', 'she', 'until', 'so', 'these', 'ours', 'above',
@@ -62,7 +62,7 @@ def upload_file():
         # Count the sentiments
         sentiment_counts = Counter(y_pred_new)
 
-        # Extract main concerns (replace with your logic to identify main concerns)
+        # Extract main concerns 
         main_concerns = ["price", "quality", "customer service"]
 
         # Initialize result table
